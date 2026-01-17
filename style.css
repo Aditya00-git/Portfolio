@@ -585,3 +585,138 @@ footer{
     transform: scale(1);
   }
 }
+/* MOBILE NAV */
+.menu-btn{
+  display:none;
+  font-size:1.8rem;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* hide nav links on mobile */
+@media (max-width: 900px){
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:rgba(0,0,0,0.95);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:14px;
+    padding:16px;
+    display:none;
+    flex-direction:column;
+    gap:14px;
+    min-width:180px;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+}
+.menu-btn{
+  display:none;
+  font-size:1.8rem;
+  cursor:pointer;
+}
+
+@media (max-width: 900px){
+
+  .menu-btn{
+    display:block;
+    z-index:1001;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:70px;
+    right:20px;
+    background:rgba(0,0,0,0.97);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:14px;
+    padding:18px;
+    display:none;
+    flex-direction:column;
+    gap:16px;
+    min-width:200px;
+    z-index:1000;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+}
+/* MENU BUTTON */
+.menu-btn{
+  display:none;
+  font-size:1.8rem;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* NAV LINKS BASE */
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:24px;
+}
+
+.nav-link{
+  position:relative;
+  padding:8px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#eaeaea;
+  opacity:0.75;
+  transition:opacity 0.25s ease, background 0.25s ease;
+}
+
+/* ACTIVE LINK */
+.nav-link.active{
+  opacity:1;
+  background:rgba(255,255,255,0.12);
+}
+
+/* MOBILE NAV */
+@media (max-width: 900px){
+
+  .menu-btn{
+    display:block;
+    z-index:1002;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:70px;
+    right:20px;
+    flex-direction:column;
+    gap:16px;
+    min-width:200px;
+
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:16px;
+    padding:18px;
+
+    opacity:0;
+    transform:translateY(-20px);
+    pointer-events:none;
+
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease;
+  }
+
+  /* SLIDE DOWN */
+  .nav-links.show{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+  }
+}
