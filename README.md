@@ -81,9 +81,13 @@ SECTIONS
 CONTACT
 -------
 Email: seswaniaditya@gmail.com
+
 GitHub: https://github.com/Aditya00-git
+
 LinkedIn: https://tinyurl.com/35u8nepx
+
 Twitter (X): https://x.com/AdityaSeswani
+
 Instagram: https://tinyurl.com/hy78vev2
 
 
