@@ -179,8 +179,6 @@ footer{
   line-height:1.8;
   opacity:0.75;
 }
-
-/* SOCIAL ICONS (BIG like anishde.dev) */
 .hero-socials{
   margin-top:34px;
   display:flex;
@@ -676,7 +674,7 @@ footer{
 
 /* ACTIVE LINK */
 .nav-link.active{
-  opacity:1;
+  opacity:2;
   background:rgba(255,255,255,0.12);
 }
 
@@ -871,4 +869,36 @@ footer{
   .achievement-card{
     padding:24px;
   }
+}
+.last{
+  color: #04fae5;
+  align-items: center;
+}
+.last{
+  position:relative;
+  display:inline-block; 
+  text-decoration:none;
+  opacity:0.8;
+  transition:opacity 0.25s ease;
+}
+
+.last::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:1.5px;
+  background:rgb(2, 255, 217);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.3s ease;
+}
+
+.last:hover{
+  opacity:2;
+}
+
+.last:hover::after{
+  transform:scaleX(1);
 }
